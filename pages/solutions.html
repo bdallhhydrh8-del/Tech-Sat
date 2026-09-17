@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="الحلول التقنية - Tech Sat" data-en="Tech Solutions - Tech Sat">الحلول التقنية - Tech Sat</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-ts-black text-ts-beige font-cairo min-h-screen flex flex-col pt-28">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-6xl">
+        <div class="glass rounded-full px-4 py-2.5 flex items-center justify-between transition-all duration-500">
+            <!-- Logo -->
+            <a href="../pages/home.html" class="flex items-center gap-2.5 group pl-2">
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-ts-blue/30 blur-lg group-hover:bg-ts-light-blue/40 transition-all duration-300">
+                    </div>
+                    <svg class="icon relative w-6 h-6 text-ts-light-blue group-hover:rotate-12 transition-transform duration-500"
+                        viewBox="0 0 24 24">
+                        <path d="m13 7 4-4 4 4-4 4" />
+                        <path d="M5.5 9.5 9 6l3.5 3.5L9 13z" />
+                        <path d="M14 14l3-3 3 3-3 3z" />
+                        <path d="M5 19a4 4 0 0 1-4-4" />
+                        <path d="M11 19a8 8 0 0 1-8-8" />
+                    </svg>
+                </div>
+                <span class="font-cairo font-bold text-lg text-ts-beige tracking-tight">Tech <span
+                        class="text-ts-light-blue">Sat</span></span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="../pages/home.html"
+                    class="nav-link px-4 py-2 text-sm font-cairo text-ts-beige/80 hover:text-ts-beige rounded-full hover:bg-ts-blue/10 transition-all duration-300"
+                    data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button type="button"
+                        class="nav-link flex items-center gap-1 px-4 py-2 text-sm font-cairo text-ts-beige/80 hover:text-ts-beige rounded-full hover:bg-ts-blue/10 transition-all duration-300">
+                        <span data-ar="الخدمات" data-en="Services">الخدمات</span>
+                        <svg class="icon w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180"
+                            viewBox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <!-- Services Dropdown Menu -->
+                    <div
+                        class="absolute right-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
+                        <div class="glass rounded-2xl p-2 min-w-[220px] shadow-2xl">
+                            <a href="government-services.html"
+                                class="block px-4 py-3 rounded-xl text-sm font-cairo text-ts-beige/80 hover:text-ts-beige hover:bg-ts-blue/10 transition-all duration-300"
+                                data-ar="الخدمات الحكومية" data-en="Government Services">الخدمات الحكومية</a>
+                            <a href="private-services.html"
+                                class="block px-4 py-3 rounded-xl text-sm font-cairo text-ts-beige/80 hover:text-ts-beige hover:bg-ts-blue/10 transition-all duration-300"
+                                data-ar="خدمات القطاع الخاص" data-en="Private Sector Services">خدمات القطاع الخاص</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown (New) -->
+                <div class="relative group">
+                    <button type="button"
+                        class="nav-link flex items-center gap-1 px-4 py-2 text-sm font-cairo text-ts-beige/80 hover:text-ts-beige rounded-full hover:bg-ts-blue/10 transition-all duration-300">
+                        <span data-ar="القطاعات" data-en="Industries">القطاعات</span>
+                        <svg class="icon w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180"
+                            viewBox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <!-- Industries Dropdown Menu -->
+                    <div
+                        class="absolute right-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
+                        <div class="glass rounded-2xl p-2 min-w-[240px] shadow-2xl">
+                            <a href="government-industries.html"
+                                class="block px-4 py-3 rounded-xl text-sm font-cairo text-ts-beige/80 hover:text-ts-beige hover:bg-ts-blue/10 transition-all duration-300"
+                                data-ar="قطاع المؤسسات الحكومية" data-en="Government Industries">قطاع المؤسسات
+                                الحكومية</a>
+                            <a href="private-industries.html"
+                                class="block px-4 py-3 rounded-xl text-sm font-cairo text-ts-beige/80 hover:text-ts-beige hover:bg-ts-blue/10 transition-all duration-300"
+                                data-ar="قطاع الشركات الخاصة" data-en="Private Enterprises">قطاع الشركات الخاصة</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="../pages/products.html"
+                    class="nav-link px-4 py-2 text-sm font-cairo text-ts-beige/80 hover:text-ts-beige rounded-full hover:bg-ts-blue/10 transition-all duration-300"
+                    data-ar="المنتجات" data-en="Products">المنتجات</a>
+                <a href="../pages/solutions.html"
+                    class="nav-link px-4 py-2 text-sm font-cairo text-ts-beige/80 hover:text-ts-beige rounded-full hover:bg-ts-blue/10 transition-all duration-300"
+                    data-ar="الحلول" data-en="Solutions">الحلول</a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center gap-2">
+                <!-- Light Mode Toggle Button -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-full text-ts-beige/70 hover:text-ts-beige hover:bg-white/5 transition-all duration-300"
+                    aria-label="تبديل الوضع الفاتح">
+                    <svg class="icon w-5 h-5" id="theme-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                </button>
+
+                <!-- Language Selector -->
+                <div class="relative hidden md:block" id="lang-wrapper">
+                    <button id="lang-toggle"
+                        class="flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-cairo text-ts-beige/70 hover:text-ts-beige hover:bg-white/5 transition-all duration-300">
+                        <svg class="icon w-4 h-4" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
+                        <span id="lang-label">العربية</span>
+                        <svg class="icon w-3.5 h-3.5 transition-transform duration-300" id="lang-chevron"
+                            viewBox="0 0 24 24">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div id="lang-dropdown"
+                        class="hidden absolute left-0 top-full mt-2 glass rounded-2xl p-2 min-w-[140px] z-50">
+                        <button
+                            class="lang-option w-full text-right px-3 py-2 rounded-xl text-sm font-cairo bg-ts-blue/20 text-ts-beige transition-all duration-200"
+                            data-lang="ar">العربية</button>
+                        <button
+                            class="lang-option w-full text-right px-3 py-2 rounded-xl text-sm font-cairo text-ts-beige/60 hover:bg-white/5 hover:text-ts-beige transition-all duration-200"
+                            data-lang="en">English</button>
+                    </div>
+                </div>
+
+                <!-- Contact CTA -->
+                <a href="../pages/contact.html"
+                    class="btn-shine relative hidden sm:flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-ts-blue to-ts-light-blue text-ts-beige text-sm font-cairo font-semibold hover:shadow-lg hover:shadow-ts-blue/30 transition-all duration-300"
+                    data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-toggle"
+                    class="lg:hidden p-2 rounded-full text-ts-beige hover:bg-white/5 transition-all"
+                    aria-label="فتح القائمة الرئيسية">
+                    <svg class="icon w-5 h-5" id="mobile-icon" viewBox="0 0 24 24">
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-2 glass rounded-3xl p-4">
+            <div class="flex flex-col gap-1">
+                <a href="../pages/home.html"
+                    class="nav-link text-right px-4 py-3 rounded-2xl text-sm font-cairo text-ts-beige/80 hover:bg-ts-blue/10 hover:text-ts-beige transition-all duration-300"
+                    data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+
+                <div class="px-4 py-2 text-xs text-ts-light-blue font-bold uppercase tracking-wider" data-ar="الخدمات"
+                    data-en="Services">الخدمات</div>
+                <a href="../pages/government-services.html"
+                    class="text-right px-6 py-2 rounded-xl text-sm font-cairo text-ts-beige/70 hover:bg-ts-blue/10 hover:text-ts-beige transition-all"
+                    data-ar="الخدمات الحكومية" data-en="Government Services">الخدمات الحكومية</a>
+                <a href="../pages/private-services.html"
+                    class="text-right px-6 py-2 rounded-xl text-sm font-cairo text-ts-beige/70 hover:bg-ts-blue/10 hover:text-ts-beige transition-all"
+                    data-ar="خدمات القطاع الخاص" data-en="Private Sector Services">خدمات القطاع الخاص</a>
+
+                <div class="px-4 py-2 text-xs text-ts-light-blue font-bold uppercase tracking-wider" data-ar="القطاعات"
+                    data-en="Industries">القطاعات</div>
+                <a href="../pages/government-industries.html"
+                    class="text-right px-6 py-2 rounded-xl text-sm font-cairo text-ts-beige/70 hover:bg-ts-blue/10 hover:text-ts-beige transition-all"
+                    data-ar="قطاع المؤسسات الحكومية" data-en="Government Industries">قطاع المؤسسات الحكومية</a>
+                <a href="../pages/private-industries.html"
+                    class="text-right px-6 py-2 rounded-xl text-sm font-cairo text-ts-beige/70 hover:bg-ts-blue/10 hover:text-ts-beige transition-all"
+                    data-ar="قطاع الشركات الخاصة" data-en="Private Enterprises">قطاع الشركات الخاصة</a>
+
+                <a href="../pages/products.html" 
+                    class="nav-link text-right px-4 py-3 rounded-2xl text-sm font-cairo text-ts-beige/80 hover:bg-ts-blue/10 hover:text-ts-beige transition-all duration-300"
+                    data-ar="المنتجات" data-en="Products">المنتجات</a>
+                <a href="solutions.html" 
+                    class="nav-link text-right px-4 py-3 rounded-2xl text-sm font-cairo text-ts-beige/80 hover:bg-ts-blue/10 hover:text-ts-beige transition-all duration-300"
+                    data-ar="الحلول" data-en="Solutions">الحلول</a>
+
+                <div class="h-px bg-ts-light-blue/10 my-2"></div>
+                <button
+                    class="lang-option text-right px-4 py-3 rounded-2xl text-sm font-cairo bg-ts-blue/20 text-ts-beige transition-all"
+                    data-lang="ar">العربية</button>
+                <button
+                    class="lang-option text-right px-4 py-3 rounded-2xl text-sm font-cairo text-ts-beige/60 hover:bg-white/5 transition-all"
+                    data-lang="en">English</button>
+                <a href="../pages/contact.html"
+                    class="mt-2 px-4 py-3 rounded-2xl bg-gradient-to-r from-ts-blue to-ts-light-blue text-ts-beige text-sm font-cairo font-semibold text-center"
+                    data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-12 w-full space-y-20">
+
+        <!-- Hero Section -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-right">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-ts-light-blue/20 text-ts-light-blue text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-ts-light-blue animate-pulse"></span>
+                    <span data-ar="حلول هندسية مبتكرة ومعممارية سحابية"
+                        data-en="Innovative Engineering Solutions & Cloud Architecture">حلول هندسية مبتكرة ومعممارية
+                        سحابية</span>
+                </div>
+                <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold leading-relaxed text-ts-light-blue text-center"
+                    data-ar="هندسة الحلول التقنية المتقدمة لمعالجة أعقد التحديات التشغيلية"
+                    data-en="Advanced Tech Solutions Engineering to Tackle Complex Operational Challenges">
+                    هندسة الحلول التقنية المتقدمة لمعالجة أعقد التحديات التشغيلية
+                </h1>
+                <p class="text-ts-beige/70 text-base leading-relaxed"
+                    data-ar="نصمم ونطور حلولاً استراتيجية شاملة تدمج بين البنية التحتية الصلبة، الذكاء الاصطناعي، والربط الفائق بين النظم المختلفة. هدفنا تمكين مؤسستك من العمل بأعلى درجات المرونة، الأمان، والتنافسية الرقمية."
+                    data-en="We design and develop comprehensive strategic solutions combining robust infrastructure, AI, and superior system integration to empower maximum agility and security.">
+                    نصمم ونطور حلولاً استراتيجية شاملة تدمج بين البنية التحتية الصلبة، الذكاء الاصطناعي، والربط الفائق
+                    بين النظم المختلفة. هدفنا تمكين مؤسستك من العمل بأعلى درجات المرونة، الأمان، والتنافسية الرقمية.</p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 rounded-xl glass-card text-xs text-ts-beige/80 border border-ts-light-blue/10">
+                        <svg class="w-4 h-4 text-ts-light-blue" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-ar="بنية سحابية قابلة للتوسع اللانهائي"
+                            data-en="Infinitely scalable cloud architecture">بنية سحابية قابلة للتوسع اللانهائي</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 rounded-xl glass-card text-xs text-ts-beige/80 border border-ts-light-blue/10">
+                        <svg class="w-4 h-4 text-ts-light-blue" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-ar="تكامل الأنظمة عبر واجهات API موحدة"
+                            data-en="System integration via unified APIs">تكامل الأنظمة عبر واجهات API موحدة</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-ts-blue to-ts-light-blue rounded-3xl blur-xl opacity-30 animate-pulse">
+                </div>
+                <div
+                    class="relative rounded-3xl overflow-hidden glass-card border border-ts-light-blue/20 p-2 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                        alt="Tech Solutions Architecture"
+                        class="w-full h-[360px] object-cover rounded-2xl filter brightness-90 hover:scale-105 transition-transform duration-700">
+                    <div
+                        class="absolute inset-x-6 bottom-6 p-4 glass rounded-2xl border border-ts-light-blue/20 backdrop-blur-md flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-semibold text-ts-beige" data-ar="هندسة الأنظمة الاستراتيجية"
+                                data-en="Strategic Systems Engineering">هندسة الأنظمة الاستراتيجية</span>
+                        </div>
+                        <span class="text-xs text-ts-light-blue font-bold">Tech Sat Solutions Lab</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solutions Grid -->
+        <div class="space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-2xl lg:text-3xl font-bold text-ts-light-blue" data-ar="محاور الحلول التقنية الشاملة"
+                    data-en="Comprehensive Tech Solutions Pillars">محاور الحلول التقنية الشاملة</h2>
+                <p class="text-ts-beige/70 text-sm" data-ar="حزم هندسية متكاملة تواكب متطلبات المستقبل الرقمي الحديث."
+                    data-en="Integrated engineering packages meeting modern digital future requirements.">حزم هندسية
+                    متكاملة تواكب متطلبات المستقبل الرقمي الحديث.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
+                <div
+                    class="glass-card rounded-3xl p-8 border border-ts-beige/10 space-y-5 hover:border-ts-light-blue/40 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-ts-blue/20 text-ts-light-blue flex items-center justify-center">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ts-beige" data-ar="التحول السحابي والهجين"
+                            data-en="Cloud & Hybrid Transformation">التحول السحابي والهجين</h3>
+                        <p class="text-sm text-ts-beige/60 leading-relaxed"
+                            data-ar="ترحيل البنيات التحتية التقليدية إلى بيئات سحابية عالية الأمان مرنة، تضمن توفر الأنظمة بنسبة 99.99% وتقليل التكاليف التشغيلية."
+                            data-en="Migrating traditional infrastructures to high-security flexible cloud environments ensuring 99.99% uptime and reduced operational costs.">
+                            ترحيل البنيات التحتية التقليدية إلى بيئات سحابية عالية الأمان مرنة، تضمن توفر الأنظمة
+                            بنسبة 99.99% وتقليل التكاليف التشغيلية.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-ts-beige/10 text-xs text-ts-beige/70">
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ts-light-blue"></span>
+                            <span data-ar="إدارة الحاويات والخدمات المصغرة (Docker/Kubernetes)"
+                                data-en="Container Management & Microservices (Docker/Kubernetes)">إدارة الحاويات
+                                والخدمات المصغرة (Docker/Kubernetes)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ts-light-blue"></span>
+                            <span data-ar="استراتيجيات التعافي من الكوارث (DR)"
+                                data-en="Disaster Recovery (DR) Strategies">استراتيجيات التعافي من الكوارث
+                                (DR)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solution 2 -->
+                <div
+                    class="glass-card rounded-3xl p-8 border border-ts-beige/10 space-y-5 hover:border-ts-light-blue/40 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-ts-blue/20 text-ts-light-blue flex items-center justify-center">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0115.171 17m3.839-1.132c.645-2.266.99-4.659.99-7.138A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ts-beige" data-ar="الأمن السيبراني وحماية البيانات"
+                            data-en="Cybersecurity & Data Protection">الأمن السيبراني وحماية البيانات</h3>
+                        <p class="text-sm text-ts-beige/60 leading-relaxed"
+                            data-ar="تطبيق منظومة دفاعية متكاملة تشمل اختبارات الاختراق، تشفير البيانات الحساسة، وحماية الأنظمة من التهديدات السيبرانية المتقدمة."
+                            data-en="Implementing an integrated defense system including penetration testing, sensitive data encryption, and advanced cyber threat protection.">
+                            تطبيق منظومة دفاعية متكاملة تشمل اختبارات الاختراق، تشفير البيانات الحساسة، وحماية
+                            الأنظمة من التهديدات السيبرانية المتقدمة.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-ts-beige/10 text-xs text-ts-beige/70">
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ts-light-blue"></span>
+                            <span data-ar="فحص الثغرات وتقييم المخاطر دورياً"
+                                data-en="Vulnerability Scanning & Periodic Risk Assessment">فحص الثغرات وتقييم
+                                المخاطر دورياً</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ts-light-blue"></span>
+                            <span data-ar="إدارة الهويات والوصول الآمن (IAM)"
+                                data-en="Identity & Access Management (IAM)">إدارة الهويات والوصول الآمن
+                                (IAM)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solution 3 -->
+                <div
+                    class="glass-card rounded-3xl p-8 border border-ts-beige/10 space-y-5 hover:border-ts-light-blue/40 transition-all duration-300 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-ts-blue/20 text-ts-light-blue flex items-center justify-center">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-ts-beige" data-ar="حلول الذكاء الاصطناعي وتحليل البيانات"
+                            data-en="AI & Data Analytics Solutions">حلول الذكاء الاصطناعي وتحليل البيانات</h3>
+                        <p class="text-sm text-ts-beige/60 leading-relaxed"
+                            data-ar="دمج خوارزميات الذكاء الاصطناعي وتحليلات البيانات الكبيرة (Big Data) لاستخراج رؤى استراتيجية تدعم اتخاذ القرار وتوقع الاتجاهات."
+                            data-en="Integrating AI algorithms and big data analytics to extract strategic insights supporting decision-making and forecasting trends.">
+                            دمج خوارزميات الذكاء الاصطناعي وتحليلات البيانات الكبيرة (Big Data) لاستخراج رؤى
+                            استراتيجية تدعم اتخاذ القرار وتوقع الاتجاهات.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 pt-4 border-t border-ts-beige/10 text-xs text-ts-beige/70">
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ts-light-blue"></span>
+                            <span data-ar="أنظمة المساعد الذكي الآلي (Chatbots)"
+                                data-en="AI Chatbot Assistant Systems (Chatbots)">أنظمة المساعد الذكي الآلي
+                                (Chatbots)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-ts-light-blue"></span>
+                            <span data-ar="لوحات المؤشرات التنفيذية (BI Dashboards)"
+                                data-en="Executive Dashboards (BI Dashboards)">لوحات المؤشرات التنفيذية (BI
+                                Dashboards)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Action Banner -->
+            <div
+                class="glass-card rounded-3xl p-10 border border-ts-light-blue/20 text-center space-y-6 relative overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-ts-blue/10 to-ts-light-blue/10"></div>
+                <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-ts-light-blue"
+                        data-ar="هل تواجه تحدياً هندسياً معقداً وتبحث عن حل جذري؟"
+                        data-en="Facing a Complex Engineering Challenge & Looking for a Radical Solution?">هل تواجه
+                        تحدياً
+                        هندسياً معقداً وتبحث عن حل جذري؟</h3>
+                    <p class="text-sm text-ts-beige/70"
+                        data-ar="فريقنا من مهندسي الحلول والسحابيات مستعد لتقييم بنيتك الحالية وتقديم خارطة طريق هندسية متكاملة."
+                        data-en="Our team of solutions and cloud engineers is ready to evaluate your current architecture and deliver an integrated engineering roadmap.">
+                        فريقنا من مهندسي الحلول والسحابيات مستعد لتقييم بنيتك الحالية وتقديم خارطة طريق هندسية
+                        متكاملة.</p>
+                    <div class="pt-2">
+                        <a href="contact.html"
+                            class="btn-shine inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-ts-blue to-ts-light-blue text-ts-beige text-sm font-cairo font-semibold shadow-lg shadow-ts-blue/30">
+                            <span data-ar="تواصل مع فريق هندسة الحلول"
+                                data-en="Contact Solutions Engineering Team">تواصل مع
+                                فريق هندسة الحلول</span>
+                            <svg class="w-4 h-4 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="footer" class="relative bg-[#050507] border-t border-ts-light-blue/10 overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-10"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-ts-blue/5 blur-3xl rounded-full">
+        </div>
+        <div class="relative max-w-6xl mx-auto px-6 pt-16 pb-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-ts-blue/30 blur-lg"></div>
+                            <svg class="icon relative w-6 h-6 text-ts-light-blue" viewBox="0 0 24 24">
+                                <path d="m13 7 4-4 4 4-4 4" />
+                                <path d="M5.5 9.5 9 6l3.5 3.5L9 13z" />
+                                <path d="M14 14l3-3 3 3-3 3z" />
+                                <path d="M5 19a4 4 0 0 1-4-4" />
+                                <path d="M11 19a8 8 0 0 1-8-8" />
+                            </svg>
+                        </div>
+                        <span class="font-cairo font-bold text-lg text-ts-beige">Tech <span
+                                class="text-ts-light-blue">Sat</span></span>
+                    </div>
+                    <p class="font-cairo text-sm text-ts-beige/40 leading-relaxed mb-5"
+                        data-ar="شركة تقنية رائدة في تقديم الحلول والخدمات والمنتجات التقنية المتطورة لقيادة التحوّل الرقمي."
+                        data-en="A leading tech company delivering advanced tech solutions, services and products to drive digital transformation.">
+                        شركة تقنية رائدة في تقديم الحلول والخدمات والمنتجات التقنية المتطورة لقيادة التحوّل الرقمي.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-ts-beige/50 hover:text-ts-beige hover:border-ts-light-blue/30 transition-all duration-300 hover:-translate-y-1">
+                            <svg class="icon w-4 h-4" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <!-- X / Twitter -->
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-ts-beige/50 hover:text-ts-beige hover:border-ts-light-blue/30 transition-all duration-300 hover:-translate-y-1">
+                            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-ts-beige/50 hover:text-ts-beige hover:border-ts-light-blue/30 transition-all duration-300 hover:-translate-y-1">
+                            <svg class="icon w-4 h-4" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H8v4h2v8h4v-8h2.5l.5-4H14V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-ts-beige/50 hover:text-ts-beige hover:border-ts-light-blue/30 transition-all duration-300 hover:-translate-y-1">
+                            <svg class="icon w-4 h-4" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-cairo font-bold text-ts-beige mb-5 text-sm" data-ar="روابط سريعة"
+                        data-en="Quick Links">روابط
+                        سريعة</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../pages/home.html"
+                                class="nav-link font-cairo text-sm text-ts-beige/40 hover:text-ts-light-blue transition-colors duration-300"
+                                data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="../pages/government-services.html"
+                                class="nav-link font-cairo text-sm text-ts-beige/40 hover:text-ts-light-blue transition-colors duration-300"
+                                data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+                        <li><a href="../pages/products.html"
+                                class="nav-link font-cairo text-sm text-ts-beige/40 hover:text-ts-light-blue transition-colors duration-300"
+                                data-ar="المنتجات" data-en="Products">المنتجات</a></li>
+                        <li><a href="solutions.html"
+                                class="nav-link font-cairo text-sm text-ts-beige/40 hover:text-ts-light-blue transition-colors duration-300"
+                                data-ar="الحلول" data-en="Solutions">الحلول</a></li>
+                        <li><a href="../pages/contact.html"
+                                class="nav-link font-cairo text-sm text-ts-beige/40 hover:text-ts-light-blue transition-colors duration-300"
+                                data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+
+
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-cairo font-bold text-ts-beige mb-5 text-sm" data-ar="تواصل معنا"
+                        data-en="Contact Us">تواصل
+                        معنا</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl glass-card flex items-center justify-center flex-shrink-0">
+                                <svg class="icon w-4 h-4 text-ts-light-blue" viewBox="0 0 24 24">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </div>
+                            <span class="font-cairo text-sm text-ts-beige/50">info@techsat.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl glass-card flex items-center justify-center flex-shrink-0">
+                                <svg class="icon w-4 h-4 text-ts-light-blue" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <span dir="ltr" class="font-cairo text-sm text-ts-beige/50 inline-block">+966 11 234
+                                5678</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl glass-card flex items-center justify-center flex-shrink-0">
+                                <svg class="icon w-4 h-4 text-ts-light-blue" viewBox="0 0 24 24">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <span class="font-cairo text-sm text-ts-beige/50" data-ar="عدن، اليمن"
+                                data-en="Aden, Yemen">
+                                عدن، اليمن
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-cairo font-bold text-ts-beige mb-5 text-sm" data-ar="انضم إلينا" data-en="Join Us">
+                        انضم إلينا
+                    </h4>
+                    <p class="font-cairo text-sm text-ts-beige/40 leading-relaxed mb-4"
+                        data-ar="اشترك ليصلك كل جديد عن منتجاتنا وحلولنا التقنية."
+                        data-en="Subscribe to receive updates about our tech products and solutions.">
+                        اشترك ليصلك كل جديد عن منتجاتنا وحلولنا التقنية.
+                    </p>
+                    <form id="newsletter-form" action="/subscribe" method="post" class="flex gap-2">
+                        <label for="newsletter-email" class="sr-only" data-ar="البريد الإلكتروني"
+                            data-en="Email Address">
+                            البريد الإلكتروني
+                        </label>
+                        <input type="email" id="newsletter-email" name="newsletter_email" placeholder="بريدك الإلكتروني"
+                            data-ar-placeholder="بريدك الإلكتروني" data-en-placeholder="Your Email" autocomplete="email"
+                            required
+                            class="flex-1 px-4 py-2.5 rounded-xl glass-card text-sm font-cairo text-ts-beige placeholder:text-ts-beige/30 focus:outline-none focus:border-ts-light-blue/40 transition-colors" />
+                        <button type="submit"
+                            class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-ts-blue to-ts-light-blue text-ts-beige text-sm font-cairo font-semibold hover:shadow-lg hover:shadow-ts-blue/30 transition-all duration-300"
+                            data-ar="اشترك" data-en="Subscribe">اشترك</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="h-px bg-gradient-to-r from-transparent via-ts-light-blue/15 to-transparent mb-6"></div>
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+
+                <!-- Copyright -->
+                <p class="font-cairo text-sm text-ts-beige/30 text-center lg:text-left"
+                    data-ar="© 2026 Tech Sat. جميع الحقوق محفوظة." data-en="© 2026 Tech Sat. All rights reserved.">
+                    © 2026 Tech Sat. All rights reserved.
+                </p>
+
+
+                <!-- Back to Top -->
+                <button id="to-top" class="group flex items-center gap-2 px-4 py-2 rounded-full
+               glass-card text-sm font-cairo text-ts-beige/50
+               hover:text-ts-beige hover:border-ts-light-blue/30
+               transition-all duration-300">
+                    <span data-ar="العودة للأعلى" data-en="Back to Top">
+                        Back to Top
+                    </span>
+
+                    <svg class="icon w-4 h-4 group-hover:-translate-y-1 transition-transform" viewBox="0 0 24 24">
+                        <path d="m5 12 7-7 7 7" />
+                        <path d="M12 19V5" />
+                    </svg>
+                </button>
+
+                <!-- Created By YOU (Non-clickable) -->
+                <div class="flex items-center gap-3 opacity-70">
+
+                    <div class="text-right font-cairo leading-tight">
+                        <span class="block text-[15px] text-ts-beige/30" data-ar="تم التطوير بواسطة"
+                            data-en="Developed by">
+                            Developed by
+                        </span>
+                    </div>
+
+                    <!-- YOU Logo -->
+                    <div
+                        class="w-14 h-14 rounded-xl overflow-hidden flex items-center justify-center bg-white/95 border border-white/10 shadow-sm">
+                        <img src="../images/WhatsApp Image 2026-09-16 at 10.46.46 PM.jpeg" alt="YOU"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                </div>
+
+            </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

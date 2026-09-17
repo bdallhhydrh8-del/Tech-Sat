@@ -1,0 +1,7 @@
+/* Header & Navbar Specific Styles */
+#navbar {
+  transition: all 0.5s ease;
+}
+#navbar .glass {
+  transition: all 0.5s ease;
+}
